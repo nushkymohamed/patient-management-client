@@ -55,7 +55,7 @@ export const CreatePatient = () => {
     });
   };
   return (
-    <div className="md:px-[20%] pt-[50px]">
+    <div className="md:px-[20%] px-[10px] pt-[20px]">
       <form
         onSubmit={handleSubmit}
         className="mb-4  md:shadow-lg md:px-[20px] px-[5px] md:py-[15px] py-[7px]"
@@ -90,7 +90,7 @@ export const CreatePatient = () => {
             name="birthday"
             value={formData.birthday}
             onChange={handleInputChange}
-            className="form-textarea mt-1 block w-full rounded-md border-gray-300 bg-gray-50 shadow-md  text-blue-950 px-[5px]"
+            className="form-input mt-1 block w-full rounded-md border-gray-300 bg-gray-50 shadow-md  text-blue-950 px-[5px] h-[40px]"
             rows="4"
             required
           />
@@ -107,7 +107,7 @@ export const CreatePatient = () => {
             name="contactNo"
             value={formData.contactNo}
             onChange={handleInputChange}
-            className="form-textarea mt-1 block w-full rounded-md border-gray-300 bg-gray-50 shadow-md  text-blue-950 px-[5px]"
+            className="form-textarea mt-1 block w-full rounded-md border-gray-300 bg-gray-50 shadow-md  text-blue-950 px-[5px] h-[40px]"
             rows="4"
             required
           />
@@ -138,7 +138,7 @@ export const CreatePatient = () => {
             name="nic"
             value={formData.nic}
             onChange={handleInputChange}
-            className="form-textarea mt-1 block w-full rounded-md border-gray-300 bg-gray-50 shadow-md  text-blue-950 px-[5px]"
+            className="form-textarea mt-1 block w-full rounded-md border-gray-300 bg-gray-50 shadow-md  text-blue-950 px-[5px] h-[40px]"
             rows="4"
             required
           />
@@ -155,7 +155,7 @@ export const CreatePatient = () => {
             name="notes"
             value={formData.notes}
             onChange={handleInputChange}
-            className="form-textarea mt-1 block w-full rounded-md border-gray-300 bg-gray-50 shadow-md  text-blue-950 px-[5px]"
+            className="form-textarea mt-1 block w-full rounded-md border-gray-300 bg-gray-50 shadow-md  text-blue-950 px-[5px] h-[60px]"
             rows="4"
             required
           />
@@ -173,7 +173,7 @@ export const CreatePatient = () => {
             name="date"
             value={formData.date}
             onChange={handleInputChange}
-            className="form-textarea mt-1 block w-full rounded-md border-gray-300 bg-gray-50 shadow-md  text-blue-950 px-[5px]"
+            className="form-textarea mt-1 block w-full rounded-md border-gray-300 bg-gray-50 shadow-md  text-blue-950 px-[5px] h-[40px]"
             rows="4"
             required
           />
@@ -182,7 +182,7 @@ export const CreatePatient = () => {
         <div className="mb-4">
           <button
             type="submit"
-            className="bg-blue-900 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded"
+            className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded"
           >
             Create Patient
           </button>

@@ -133,11 +133,11 @@ function ListPrescriptions() {
     <div className="">
       <WebNavigation />
       <div className="md:pt-[95px] pt-[95px] md:px-[20px] px-[10px]">
-        <div className="grid grid-cols-3 gap-[20px] ">
+        <div className="md:grid grid-cols-3 gap-[20px] ">
           <div className="col-span-1">
-            <span className="text-2xl">Patients Prescription List</span>
+            <span className="md:text-2xl text-base">Patients Prescription List</span>
           </div>
-          <div className="col-span-1">
+          <div className="col-span-1 pt-[10px] md:pt-[0px]">
             <TextField
               className="w-full"
               placeholder="Search Prescription..."
@@ -154,10 +154,10 @@ function ListPrescriptions() {
               }}
             />
           </div>
-          <div className="col-span-1 flex flex-row-reverse">
+          <div className="col-span-1 md:flex flex-row-reverse pt-[10px] md:pt-[0px]">
             <Button
               variant="outlined"
-              className="w-[200px] text-sm"
+              className="md:w-[200px] text-sm"
               onClick={handleCreate}
               endIcon={<AddCircleOutlineIcon />}
             >

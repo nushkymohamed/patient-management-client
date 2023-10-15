@@ -1,27 +1,32 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Logo from '../../Assets/avl-logo.png';
 import { Link } from 'react-router-dom';
+
 function WebNavigation() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const toggleMobileMenu = () => {
+    setMobileMenuOpen(!mobileMenuOpen);
+  };
+
   return (
     <>
-      <nav class=" bg-gray-50 h-[80px] shadow-lg fixed top-0 z-10  w-full ">
-        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-          <a href="/" class="flex items-center">
-            <img src={Logo} class="h-12 mr-3" alt="Flowbite Logo" />
-            <span class=" font-semibold text-black text-xl">
+      <nav className="bg-gray-50 h-[80px] shadow-lg fixed top-0 z-10 w-full">
+        <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+          <a href="/" className="flex items-center">
+            <img src={Logo} className="h-12 mr-3" alt=" Logo" />
+            <span className="font-semibold text-black text-xl">
               John's Medicals
             </span>
           </a>
           <button
-            data-collapse-toggle="navbar-default"
+            onClick={toggleMobileMenu}
             type="button"
-            class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-            aria-controls="navbar-default"
-            aria-expanded="false"
+            className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
           >
-            <span class="sr-only">Open main menu</span>
+            <span className="sr-only">Open main menu</span>
             <svg
-              class="w-5 h-5"
+              className="w-5 h-5"
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -36,12 +41,18 @@ function WebNavigation() {
               />
             </svg>
           </button>
-          <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-            <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0">
+          <div
+            className={`w-full md:block md:w-auto ${
+              mobileMenuOpen ? 'block' : 'hidden'
+            }`}
+            id="navbar-default"
+          >
+            <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0">
               <li>
                 <Link
                   to="/"
-                  class="block py-2 pl-3 pr-4  text-black rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-green-900 md:p-0 dark: text-black md:dark:hover:text-green-900 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                  onClick={toggleMobileMenu}
+                  className="block py-2 pl-3 pr-4 text-black rounded hover-bg-gray-100 md-hover-bg-transparent md-border-0 md-hover-text-green-900 md-p-0 dark-text-black md-dark-hover-text-green-900 dark-hover-bg-gray-700 dark-hover-text-white md-dark-hover-bg-transparent"
                 >
                   Home
                 </Link>
@@ -49,7 +60,8 @@ function WebNavigation() {
               <li>
                 <Link
                   to="/Listpatients"
-                  class="block py-2 pl-3 pr-4  text-black rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-green-900 md:p-0 dark: text-black md:dark:hover:text-green-900 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                  onClick={toggleMobileMenu}
+                  className="block py-2 pl-3 pr-4 text-black rounded hover-bg-gray-100 md-hover-bg-transparent md-border-0 md-hover-text-green-900 md-p-0 dark-text-black md-dark-hover-text-green-900 dark-hover-bg-gray-700 dark-hover-text-white md-dark-hover-bg-transparent"
                 >
                   Patients
                 </Link>
@@ -57,7 +69,8 @@ function WebNavigation() {
               <li>
                 <Link
                   to="/Listprescriptions"
-                  class="block py-2 pl-3 pr-4  text-black rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-green-900 md:p-0 dark: text-black md:dark:hover:text-green-900 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                  onClick={toggleMobileMenu}
+                  className="block py-2 pl-3 pr-4 text-black rounded hover-bg-gray-100 md-hover-bg-transparent md-border-0 md-hover-text-green-900 md-p-0 dark-text-black md-dark-hover-text-green-900 dark-hover-bg-gray-700 dark-hover-text-white md-dark-hover-bg-transparent"
                 >
                   Prescriptions
                 </Link>
@@ -65,7 +78,8 @@ function WebNavigation() {
               <li>
                 <Link
                   to="/ListBillPayments"
-                  class="block py-2 pl-3 pr-4  text-black rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-green-900 md:p-0 dark: text-black md:dark:hover:text-green-900 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                  onClick={toggleMobileMenu}
+                  className="block py-2 pl-3 pr-4 text-black rounded hover-bg-gray-100 md-hover-bg-transparent md-border-0 md-hover-text-green-900 md-p-0 dark-text-black md-dark-hover-text-green-900 dark-hover-bg-gray-700 dark-hover-text-white md-dark-hover-bg-transparent"
                 >
                   Bill Payments
                 </Link>
@@ -73,7 +87,8 @@ function WebNavigation() {
               <li>
                 <Link
                   to="/RevenueReport"
-                  class="block py-2 pl-3 pr-4  text-black rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-green-900 md:p-0 dark: text-black md:dark:hover:text-green-900 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                  onClick={toggleMobileMenu}
+                  className="block py-2 pl-3 pr-4 text-black rounded hover-bg-gray-100 md-hover-bg-transparent md-border-0 md-hover-text-green-900 md-p-0 dark-text-black md-dark-hover-text-green-900 dark-hover-bg-gray-700 dark-hover-text-white md-dark-hover-bg-transparent"
                 >
                   Reports
                 </Link>

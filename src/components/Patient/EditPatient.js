@@ -64,92 +64,94 @@ export const EditPatient = () => {
   };
 
   return (
-    <div className="p-4">
-      <h2 className="text-xl font-bold mb-2">Edit Patient</h2>
-      <form onSubmit={handleSubmit}>
-        <div className="mb-4">
-          <label className="block text-gray-600 font-bold mb-2">
-            Patient Name
-          </label>
-          <input
-            type="text"
-            name="name"
-            value={patientData.name}
-            onChange={handleInputChange}
-            className="border rounded-lg px-3 py-2 w-full"
-          />
-        </div>
-        <div className="mb-4">
-          <label className="block text-gray-600 font-bold mb-2">
-            Patient Birthday
-          </label>
-          <input
-            type="date"
-            name="birthday"
-            value={patientData.birthday}
-            onChange={handleInputChange}
-            className="border rounded-lg px-3 py-2 w-full"
-          />
-        </div>
-        <div className="mb-4">
-          <label className="block text-gray-600 font-bold mb-2">
-            Patient Contact No
-          </label>
-          <input
-            name="contactNo"
-            value={patientData.contactNo}
-            onChange={handleInputChange}
-            className="border rounded-lg px-3 py-2 w-full"
-          />
-        </div>
+    <div className="md:px-[20%] px-[10px] pt-[20px] ">
+      <div className="md:shadow-2xl px-[40px] pb-[20px]">
+        <h2 className="text-xl font-bold mb-2">Edit Patient</h2>
+        <form onSubmit={handleSubmit}>
+          <div className="mb-4">
+            <label className="block text-gray-600 font-bold mb-2">
+              Patient Name
+            </label>
+            <input
+              type="text"
+              name="name"
+              value={patientData.name}
+              onChange={handleInputChange}
+              className="border rounded-lg px-3 py-2 w-full"
+            />
+          </div>
+          <div className="mb-4">
+            <label className="block text-gray-600 font-bold mb-2">
+              Patient Birthday
+            </label>
+            <input
+              type="date"
+              name="birthday"
+              value={patientData.birthday}
+              onChange={handleInputChange}
+              className="border rounded-lg px-3 py-2 w-full"
+            />
+          </div>
+          <div className="mb-4">
+            <label className="block text-gray-600 font-bold mb-2">
+              Patient Contact No
+            </label>
+            <input
+              name="contactNo"
+              value={patientData.contactNo}
+              onChange={handleInputChange}
+              className="border rounded-lg px-3 py-2 w-full"
+            />
+          </div>
 
-        <div className="mb-4 pt-[20px]">
-          <label className="block text-gray-600 font-bold mb-2">Image:</label>
-          <input
-            type="file"
-            name="image"
-            accept="image/*"
-            onChange={handleInputChange}
-          />
-        </div>
-        <div className="mb-4">
-          <label className="block text-gray-600 font-bold mb-2">
-            Patient NIC
-          </label>
-          <input
-            name="nic"
-            value={patientData.nic}
-            onChange={handleInputChange}
-            className="border rounded-lg px-3 py-2 w-full"
-          />
-        </div>
-        <div className="mb-4">
-          <label className="block text-gray-600 font-bold mb-2">Notes</label>
-          <input
-            name="notes"
-            value={patientData.notes}
-            onChange={handleInputChange}
-            className="border rounded-lg px-3 py-2 w-full"
-          />
-        </div>
-        <div className="mb-4">
-          <label className="block text-gray-600 font-bold mb-2">Date</label>
-          <input
-            name="date"
-            value={patientData.date}
-            onChange={handleInputChange}
-            className="border rounded-lg px-3 py-2 w-full"
-          />
-        </div>
-        <div className="flex justify-between">
-          <button
-            type="submit"
-            className="bg-blue-950 hover:bg-blue-900 text-white font-semibold py-2 px-4 rounded"
-          >
-            Update
-          </button>
-        </div>
-      </form>
+          <div className="mb-4 pt-[20px]">
+            <label className="block text-gray-600 font-bold mb-2">Image:</label>
+            <input
+              type="file"
+              name="image"
+              accept="image/*"
+              onChange={handleInputChange}
+            />
+          </div>
+          <div className="mb-4">
+            <label className="block text-gray-600 font-bold mb-2">
+              Patient NIC
+            </label>
+            <input
+              name="nic"
+              value={patientData.nic}
+              onChange={handleInputChange}
+              className="border rounded-lg px-3 py-2 w-full"
+            />
+          </div>
+          <div className="mb-4">
+            <label className="block text-gray-600 font-bold mb-2">Notes</label>
+            <input
+              name="notes"
+              value={patientData.notes}
+              onChange={handleInputChange}
+              className="border rounded-lg px-3 py-2 w-full"
+            />
+          </div>
+          <div className="mb-4">
+            <label className="block text-gray-600 font-bold mb-2">Date</label>
+            <input
+              name="date"
+              value={patientData.date}
+              onChange={handleInputChange}
+              className="border rounded-lg px-3 py-2 w-full"
+            />
+          </div>
+          <div className="flex justify-between">
+            <button
+              type="submit"
+              className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded"
+            >
+              Update
+            </button>
+          </div>
+        </form>
+      </div>
     </div>
   );
 };

@@ -153,7 +153,7 @@ function ListPatients() {
           <div className="col-span-1 md:flex flex-row-reverse pt-[10px] md:pt-[0px]">
             <Button
               variant="outlined"
-              className="w-[200px] text-sm"
+              className="md:w-[200px] text-sm"
               onClick={() => handleCreate()}
               endIcon={<AddCircleOutlineIcon />}
             >
